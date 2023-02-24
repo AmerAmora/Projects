@@ -1,0 +1,537 @@
+
+*{ 
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar{ 
+    background-color: #171A1C; 
+    position: relative; 
+    height: 100px;
+}
+.listItem{ 
+    display: inline-block; 
+     margin-left: 60px; 
+    }
+.logo{ margin-left: 50px;
+    width: 130px; height: 130px;
+}
+a{
+    text-decoration: none; 
+    color: white; 
+    font-family: 'Times New Roman', Times, serif; font-size: 20px;
+}
+.navList
+{ 
+    list-style-type: none; 
+    position: absolute; right:70px; top :40px;
+}
+.main{ 
+    background-color: #171A1C; 
+    height: 700px;
+    position: relative;
+    border-bottom: 1px solid rgb(255, 255, 255,0.3) ;
+
+}
+.mainImage{ 
+    position: absolute; 
+    bottom: 0; right: 150px; 
+    width: 310px;
+}
+.mainText{
+    text-align: center; 
+    font-size: 50px; 
+    padding-top: 150px; 
+    
+    color: white; 
+    font-weight: bold;
+    font-family:Caveat ;
+}
+.position{
+    text-align: center; 
+    font-size: 20px; 
+    padding-top: 20px; 
+    color: white;
+    font-family:Arial, Helvetica, sans-serif ;
+
+}
+.quote
+{
+    text-align: center; 
+    font-size: 20px; 
+    padding-top: 100px; 
+    color: white;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-style: italic;
+}
+.education{
+    background-color: #22282A; 
+    height: 700px;
+    position: relative;
+    border-bottom: 1px solid rgb(255, 255, 255,0.3) ;
+}
+.eduImage{ 
+    position: absolute; left: -450px; bottom: -45px; 
+    width:1200px;
+}
+.eduMain
+{ 
+    color: white;
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    padding-top: 40px;
+    font-weight: bold;
+    padding-right: 80px;
+    
+   
+}
+.column {
+    
+    
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+ 
+  
+.card { position: absolute;
+    width: 300px;
+    height: 350px;
+    top:220px;
+    right: 250px;
+    border-radius: 12px;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.5);
+  
+  text-align: center;
+  background-color: #3F4D54;
+}
+.cardItems
+{
+    color: white;
+    padding-top: 30px;
+}
+.yarmouk{width: 100px; height: 100px; padding-top: 10px; }
+.skills{ 
+    background-color: #171A1C; 
+    height: 1100px;
+    position: relative;
+    border-bottom: 1px solid rgb(255, 255, 255,0.3) ;
+}
+.skillsMain
+{
+    color: white;
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    padding-top: 40px;
+    font-weight: bold;
+
+}
+.gridContainer{ 
+    margin-left: 100px;
+    display: grid; 
+    grid-template-columns: auto auto;
+}
+.techSkills
+{
+    color: white;
+    padding-left: 200px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding-top: 100px;
+    font-weight: bold;
+
+}
+.skillsList
+{ margin-top: 20px;
+    margin-left: 220px;
+}
+.skillsItem
+{ color: white;
+    font-size: 20px; 
+    padding: 20px;
+}
+.softSkills
+{
+    color: white;
+    padding-left: 200px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding-top: 100px;
+    font-weight: bold;
+
+}
+.lan{ 
+    text-align: center;
+    color: white;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    padding-top: 150px;
+    font-weight: bold; 
+   
+}
+.softItem{ 
+    color: white;
+    font-size: 20px; 
+    padding: 20px;
+}
+.lanList{ display: inline-block;}
+.lanItem
+{ color: white; 
+ display: inline-block;
+font-size: 25px;
+padding-top: 100px;
+margin-left: 320px;
+
+}
+
+
+
+.container {
+    display: inline-block;
+   margin-left: 120px;
+    width: 700px;
+    text-align: center;
+  }
+  .progress2 {
+    padding: 6px;
+    border-radius: 30px;    
+    background:white;  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar2 {
+    height: 10px;
+    border-radius: 30px;
+   
+     
+  }
+  
+  .progress-moved .progress-bar2 {
+    width: 90%; 
+    background-color: #34544C;  
+    
+  }
+
+  
+
+  .container-2 {
+    display: inline-block;
+   margin-left: 120px;
+    width: 700px;
+    text-align: center;
+  }
+  .progress2-2 {
+    padding: 6px;
+    border-radius: 30px;
+    background:white;  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar2-2 {
+    height: 10px;
+    border-radius: 30px;
+   
+     
+  }
+  
+  .progress-moved-2 .progress-bar2-2 {
+    width: 70%; 
+    background-color:#354041;  
+    
+  }
+
+
+
+
+
+
+.experience{ 
+    position: relative;
+background-color: #22282A;
+height: 600px;
+border-bottom: 1px solid rgb(255, 255, 255,0.3) ;
+}
+
+.expMain
+{
+    color: white;
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    padding-top: 50px;
+    font-weight: bold;
+
+}
+.expImage
+{
+    height: 350px;
+    position: absolute; 
+    right: 0;
+    top: 210px;
+}
+.expText
+{
+    color: white;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 300px;
+    padding-top: 120px;
+}
+
+.exp-grid
+{    
+    display: grid;  
+    grid-template-columns: 300px 300px;
+   
+}
+.lists
+{   width: 100px;
+     margin-top: 50px;
+    margin-left: 400px;
+    font-size: 17px;
+    color: white;
+    
+}
+.frontItem
+{ width: 100px;
+    margin-left: 415px;
+    padding-top: 20px;
+    color: white;
+}
+.backItem
+{ width: 100px;
+    color: white;
+    margin-left: 415px;
+    padding-top: 20px;
+}
+
+.Certificates 
+{
+    position: relative;
+background-color:#171A1C;
+height: 850px;
+border-bottom: 1px solid rgb(255, 255, 255,0.3) ;
+}
+.cerMain
+{
+    color: white;
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    padding-top: 50px;
+    font-weight: bold;
+
+}
+.Cert{width: 250px; padding-top: 10px; border-radius: 2%;}
+
+.certCard { position: absolute;
+    width: 300px;
+    height: 440px;
+    top:220px;
+    right: 40%;
+    border-radius: 12px;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.5);
+  
+  text-align: center;
+  background-color: #3F4D54;
+}
+.certItems
+{
+    color: white;
+    padding-top: 30px;
+}
+.References
+{
+    position: relative;
+    background-color:#22282A;
+    height: 700px;
+}
+.refsMain
+{
+    color: white;
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    padding-top: 50px;
+    font-weight: bold;
+}
+
+.flex-cards 
+{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+.ref-column {
+    
+    
+    width: 33%;
+    padding: 0 10px;
+    margin-top: 70px;
+    margin-left: 90px;
+  }
+  
+
+.ref-Card { 
+    width: 300px;
+    height: 430px;
+    top:220px;
+   
+    border-radius: 12px;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.5);
+  
+  text-align: center;
+  background-color: #3F4D54;
+}
+.ref-Items
+{
+    color: white;
+    padding-top: 30px;
+}
+.footer
+{
+    background-color: #171A1C;
+    height: 300px;
+}
+
+.footer-grid
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 300px;
+}
+.footer-items
+{
+    color: white;
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 30px;
+    
+}
+.footer-list{ list-style: none;}
+.footer-list-item{ padding-top: 50px; font-size: 17px;}
+.socials
+{
+    list-style: none;
+    margin-top: 50px;
+}
+.socials-items
+{
+    display: inline-block;
+    padding-left: 20px;
+}
+@media screen and (min-device-width: 0px) and (max-device-width : 480px){
+    .logo{width: 100px ; height: 100px; padding-left: 112px;}
+    
+    .listItem a {font-size: 10px;}
+    .navList{margin-top: 45px;}
+    .listItem{padding: 0; margin: 0; margin-right: 17px;}
+   #contact{ margin-left: 35px;}
+    .logo{ margin-left: 1px;}
+    html,body{width: 100%; height: 100%;}
+    .mainText{ font-size: 20px; margin-left: 110px; width: 200px; padding-top: 200px;}
+    .position{font-size: 10px; margin-left: 165px ; width: 100px;}
+    .quote{ font-size: 10px; width: 100px; margin-top: 100px;}
+    .mainImage{width: 200px; height: 400px; margin-right: -150px;}
+    .eduMain{font-size: 30px; margin-left:60px;}
+    .eduImage{ display: none;}
+    .card{ margin-right:-240px;}
+    
+    
+    .skills{ height: 1500px;}
+    
+.gridContainer
+{ grid-template-columns: auto;
+    margin-left: -100px;
+}
+.techSkills{font-size: 20px;}
+.skillsItem
+{
+    font-size: 15px;
+}
+.softSkills{font-size: 20px;}
+.skillsMain{ font-size: 30px;}
+    .softItem{font-size: 15px;}
+    .lan{ font-size: 30px;}
+    .lanItem{ font-size: 18px; margin-left:110px;}
+    .container{ display: block; width: 300px; margin-left:-100px ; margin-top: 10px; padding-top: 10px;} 
+    .container-2{display: block; width: 300px; margin-left:-100px ; margin-top: 10px; padding-top: 10px;}
+    #arabic{ margin-left: 20px;}
+    #english{ margin-left: 20px; }
+    .expMain{ font-size: 30px;}
+    .expImage{ margin-top:-50px; height: 150px;}
+    .expText{ font-size: 15px; margin-left: -280px; margin-top: 130px;}
+    .exp-grid{margin-left:-270px; grid-template-columns: 300px;}
+    .lists{font-size: 15px;}
+    .frontItem,.backItem{font-size: 10px;}
+    .experience{height: 700px;}
+    .cerMain{font-size: 30px;}
+    .certCard{ margin-right: -70px;  width: 200px;
+        height: 350px;}
+        .References{height: 1100px;}
+        .refsMain{font-size: 30px;}
+        .Certificates{height: 700px;}
+        .flex-cards{
+            flex-direction: row;
+         margin-right: 200px;
+            flex-wrap: wrap;
+        }
+        .ref-Card{width: 150px; height: 250px;}
+        .Cert{width: 100px; height: 100px;}
+        .ref-Items{font-size: 10px;}
+        .footer-items{font-size: 15px;}
+        .socials-items{margin-left: -10px;}
+        .footer-grid{ margin-left:100px; grid-template-columns: auto  ;}
+        .footer-list-item{font-size: 10px; padding-top: 30px;}
+}
+
+
+
+
+
+
+
+@media screen and (min-device-width: 481px) and (max-device-width : 768px){
+   html,body{width: 100%; height: 100%;}
+  .mainImage{ width: 300px; margin-right: -70px;}
+  .eduImage{ display: none;}
+  
+  .quote { font-size: 15px;}
+  .gridContainer{margin-left: -100px;}
+  .container{ display: block; width: 400px; margin-left:-150px ; margin-top: 10px;} 
+  .lanItem{ display: block;}
+  .container-2{display: block; width: 400px; margin-left:-150px ; margin-top: 10px;}
+  .card{ margin-right: 25px;}
+  .expText
+{
+    color: white;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 100px;
+    padding-top: 120px;
+}
+.expImage{height: 200px;}
+.exp-grid{ margin-left:-270px;}
+.certCard{margin-right:-80px;}
+.listItem{ margin-right: -20px;}
+a{font-size: 14px;}
+.logo{ width: 100px; height: 100px; margin-top: 10px;}
+.ref-Card{width: 200px; height: 350px;}
+.Cert{width:150px;}
+.References{height: 1000px;}
+.flex-cards{flex-wrap: wrap;}
+.footer-grid{ justify-content: space-around;margin-left: 50px;}
+.eduMain{font-size: 40px;}
+.skillsMain{font-size: 40px;}
+.expMain{font-size: 40px;}
+.cerMain{font-size: 40px;}
+.refsMain{font-size: 40px;}
+.footer-items{font-size: 20px;}
+.socials-items{font-size: 20px; margin-left: -10px;}
+.footer-list-item{font-size: 10px;}
+}
