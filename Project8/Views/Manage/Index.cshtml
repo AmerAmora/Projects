@@ -1,0 +1,1018 @@
+﻿
+@{
+    ViewBag.Title = "Manage";
+}
+
+<style>
+
+
+    .title {
+        margin-left: 20px
+    }
+
+    .fa-user {
+        font-size: 80px
+    }
+
+    .searchable-container {
+        margin-top: 40px;
+    }
+
+    .glyphicon-lg {
+        font-size: 4em
+    }
+
+    .info-block {
+        border-right: 5px solid #E6E6E6;
+        margin-bottom: 25px
+    }
+
+        .info-block .square-box {
+            width: 120px;
+            min-height: 120px;
+            margin-right: 22px;
+            text-align: center !important;
+            background-color: #676767;
+            padding: 20px 0
+        }
+
+        .info-block:hover .info-block.block-info {
+            border-color: #20819e
+        }
+
+        .info-block.block-info .square-box {
+            background-color: #5bc0de;
+            color: #FFF
+        }
+
+
+
+
+
+
+    /*   */
+
+
+
+    .btn-compose-email {
+        padding: 10px 0px;
+        margin-bottom: 20px;
+    }
+
+    .btn-danger {
+        background-color: #E9573F;
+        border-color: #E9573F;
+        color: white;
+    }
+
+    .panel-teal .panel-heading {
+        background-color: #37BC9B;
+        border: 1px solid #36b898;
+        color: white;
+    }
+
+    .panel .panel-heading {
+        padding: 5px;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        border-bottom: 1px solid #DDD;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+    }
+
+        .panel .panel-heading .panel-title {
+            padding: 10px;
+            font-size: 17px;
+        }
+
+    form .form-group {
+        position: relative;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+    .inner-all {
+        padding: 10px;
+    }
+
+    /* ========================================================================
+    * MAIL
+    * ======================================================================== */
+    .nav-email > li:first-child + li:active {
+        margin-top: 0px;
+    }
+
+    .nav-email > li + li {
+        margin-top: 1px;
+    }
+
+    .nav-email li {
+        background-color: white;
+    }
+
+        .nav-email li.active {
+            background-color: transparent;
+        }
+
+            .nav-email li.active .label {
+                background-color: white;
+                color: black;
+            }
+
+        .nav-email li a {
+            color: black;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            border-radius: 0px;
+        }
+
+            .nav-email li a:hover {
+                background-color: #EEEEEE;
+            }
+
+            .nav-email li a i {
+                margin-right: 5px;
+            }
+
+            .nav-email li a .label {
+                margin-top: -1px;
+            }
+
+    .table-email tr:first-child td {
+        border-top: none;
+    }
+
+    .table-email tr td {
+        vertical-align: top !important;
+    }
+
+        .table-email tr td:first-child, .table-email tr td:nth-child(2) {
+            text-align: center;
+            width: 35px;
+        }
+
+    .table-email tr.unread, .table-email tr.selected {
+        background-color: #EEEEEE;
+    }
+
+    .table-email .media {
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+    }
+
+        .table-email .media h4 {
+            margin: 0px;
+            font-size: 14px;
+            line-height: normal;
+        }
+
+    .table-email .media-object {
+        width: 35px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+    .table-email .media-meta, .table-email .media-attach {
+        font-size: 11px;
+        color: #999;
+        position: absolute;
+        right: 10px;
+    }
+
+    .table-email .media-meta {
+        top: 0px;
+    }
+
+    .table-email .media-attach {
+        bottom: 0px;
+    }
+
+        .table-email .media-attach i {
+            margin-right: 10px;
+        }
+
+            .table-email .media-attach i:last-child {
+                margin-right: 0px;
+            }
+
+    .table-email .email-summary {
+        margin: 0px 110px 0px 0px;
+    }
+
+        .table-email .email-summary strong {
+            color: #333;
+        }
+
+        .table-email .email-summary span {
+            line-height: 1;
+        }
+
+            .table-email .email-summary span.label {
+                padding: 1px 5px 2px;
+            }
+
+    .table-email .ckbox {
+        line-height: 0px;
+        margin-left: 8px;
+    }
+
+    .table-email .star {
+        margin-left: 6px;
+    }
+
+        .table-email .star.star-checked i {
+            color: goldenrod;
+        }
+
+    .nav-email-subtitle {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #333;
+        margin-bottom: 15px;
+        margin-top: 30px;
+    }
+
+    .compose-mail {
+        position: relative;
+        padding: 15px;
+    }
+
+        .compose-mail textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #DDD;
+        }
+
+    .view-mail {
+        padding: 10px;
+        font-weight: 300;
+    }
+
+    .attachment-mail {
+        padding: 10px;
+        width: 100%;
+        display: inline-block;
+        margin: 20px 0px;
+        border-top: 1px solid #EFF2F7;
+    }
+
+        .attachment-mail p {
+            margin-bottom: 0px;
+        }
+
+        .attachment-mail a {
+            color: #32323A;
+        }
+
+        .attachment-mail ul {
+            padding: 0px;
+        }
+
+            .attachment-mail ul li {
+                float: left;
+                width: 200px;
+                margin-right: 15px;
+                margin-top: 15px;
+                list-style: none;
+            }
+
+                .attachment-mail ul li a.atch-thumb img {
+                    width: 200px;
+                    margin-bottom: 10px;
+                }
+
+                .attachment-mail ul li a.name span {
+                    float: right;
+                    color: #767676;
+                }
+
+    .comment-list .row {
+        margin-bottom: 0px;
+    }
+
+    .comment-list .panel .panel-heading {
+        padding: 4px 15px;
+        position: absolute;
+        border: none;
+        /*Panel-heading border radius*/
+        border-top-right-radius: 0px;
+        top: 1px;
+    }
+
+        .comment-list .panel .panel-heading.right {
+            border-right-width: 0px;
+            /*Panel-heading border radius*/
+            border-top-left-radius: 0px;
+            right: 16px;
+        }
+
+        .comment-list .panel .panel-heading .panel-body {
+            padding-top: 6px;
+        }
+
+    .comment-list figcaption {
+        /*For wrapping text in thumbnail*/
+        word-wrap: break-word;
+    }
+    /* Portrait tablets and medium desktops */
+
+
+    .comment-list .comment-post {
+        margin-top: 6px;
+    }
+
+    .page-header {
+        text-align: center;
+    }
+
+    /*social buttons*/
+    .btn-social {
+        color: white;
+        opacity: 0.9;
+    }
+
+        .btn-social:hover {
+            color: white;
+            opacity: 1;
+        }
+
+    .btn-facebook {
+        background-color: #3b5998;
+        opacity: 0.9;
+    }
+
+    .btn-twitter {
+        background-color: #00aced;
+        opacity: 0.9;
+    }
+
+    .btn-linkedin {
+        background-color: #0e76a8;
+        opacity: 0.9;
+    }
+
+    .btn-github {
+        background-color: #000000;
+        opacity: 0.9;
+    }
+
+    .btn-google {
+        background-color: #c32f10;
+        opacity: 0.9;
+    }
+
+    .btn-stackoverflow {
+        background-color: #D38B28;
+        opacity: 0.9;
+    }
+
+    .bs-callout {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        border-color: #eee;
+        border-image: none;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px 1px 1px 5px;
+        margin-bottom: 5px;
+        padding: 20px;
+    }
+
+        .bs-callout:last-child {
+            margin-bottom: 0px;
+        }
+
+        .bs-callout h4 {
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+    .bs-callout-danger {
+        border-left-color: #d9534f;
+    }
+
+        .bs-callout-danger h4 {
+            color: #d9534f;
+        }
+
+    .resume .list-group-item:first-child, .resume .list-group-item:last-child {
+        border-radius: 0;
+    }
+
+    /*makes an anchor inactive(not clickable)*/
+    .inactive-link {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .resume-heading .social-btns {
+        margin-top: 15px;
+    }
+
+        .resume-heading .social-btns i.fa {
+            margin-left: -5px;
+        }
+
+    .progress-bar {
+        text-align: left;
+        white-space: nowrap;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+    }
+
+        .progress-bar > .progress-type {
+            padding-left: 10px;
+        }
+
+    .progress-meter {
+        min-height: 15px;
+        border-bottom: 2px solid rgb(160, 160, 160);
+        margin-bottom: 15px;
+    }
+
+        .progress-meter > .meter {
+            position: relative;
+            float: left;
+            min-height: 15px;
+            border-width: 0px;
+            border-style: solid;
+            border-color: rgb(160, 160, 160);
+        }
+
+        .progress-meter > .meter-left {
+            border-left-width: 2px;
+        }
+
+        .progress-meter > .meter-right {
+            float: right;
+            border-right-width: 2px;
+        }
+
+            .progress-meter > .meter-right:last-child {
+                border-left-width: 2px;
+            }
+
+        .progress-meter > .meter > .meter-text {
+            position: absolute;
+            display: inline-block;
+            bottom: -20px;
+            width: 100%;
+            font-weight: 700;
+            font-size: 0.85em;
+            color: rgb(160, 160, 160);
+            text-align: left;
+        }
+
+        .progress-meter > .meter.meter-right > .meter-text {
+            text-align: right;
+        }
+
+    body {
+        background-color: white;
+    }
+</style>
+<hr />
+
+
+
+
+<div class="container">
+    <div class="container" style="margin:0;padding:0;">
+
+        <div class="container" style="box-shadow: 2px 0px 23px 6px rgba(0,0,0,0.29); -webkit-box-shadow: 2px 0px 23px 6px rgba(0,0,0,0.29); -moz-box-shadow: 2px 0px 23px 6px rgba(0,0,0,0.29);">
+
+            <ul class="nav nav-pills  nav-email shadow mb-20 mt-3" style="font-weight:bolder;">
+                @if (ViewBag.sender == "MyInformation")
+                {
+
+
+                    <li class="active">
+
+
+                        <a href="~/Manage/index ">
+                            <i class="fa fa-inbox"></i> My Information
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li>
+
+
+                        <a href="~/Manage/index ">
+                            <i class="fa fa-inbox"></i> My Information
+                        </a>
+                    </li>
+                }
+
+
+
+
+                @if (ViewBag.sender == "MyCourses")
+                {
+
+
+                    <li class="active">
+
+                        <a href="~/Manage/MyCourses"><i class="fa fa-envelope-o"></i> My Courses</a>
+                    </li>
+                }
+                else
+                {
+                    <li>
+
+                        <a href="~/Manage/MyCourses"><i class="fa fa-envelope-o"></i> My Courses</a>
+                    </li>
+                }
+
+                @if (ViewBag.sender == "Balance")
+                {
+
+
+                    <li class="active">
+                        <a href="~/Manage/Balance"><i class="fa fa-certificate"></i> Balance</a>
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        <a href="~/Manage/Balance"><i class="fa fa-certificate"></i> Balance</a>
+                    </li>
+                }
+
+                @*@if (ViewBag.sender == "ManageProfile")
+                    {
+
+
+                        <li class="active">
+                            <a href="~/Manage/ManageProfile">
+                                <i class="fa fa-file-text-o"></i> Manage Profile
+                            </a>
+
+
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <a href="~/Manage/ManageProfile">
+                                <i class="fa fa-file-text-o"></i> Manage Profile
+                            </a>
+                        </li>
+                    }*@
+                @*@if (ViewBag.sender == "Registration")
+                    {
+
+
+                        <li class="active">
+
+
+
+                            <a href="~/Manage/Registration">
+
+                                <i class="fa fa-file-text-o"></i> Registration
+                            </a>
+
+
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+
+                            <a href="~/Manage/Registration">
+
+                                <i class="fa fa-file-text-o"></i> Registration
+                            </a>
+
+
+                        </li>
+                    }
+                    <li class="pull-right">
+                        <br />
+                        <label class="col-12 control-label">Balance: @ViewBag.CurrentBalance Jd</label>
+                    </li>*@
+            </ul>
+
+            @if (ViewBag.sender == "Registration")
+            {
+
+                <div class="container" style="padding:0px 50px 0px 0px;">
+
+
+                    <form action="Registration" method="post" class="form-horizontal pull-right">
+                        <div class="input-group">
+                            <input type="number" name="Course_id" id="Course_id" class="form-control" />
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-primary" style="border-radius:unset;">
+
+                                    <span aria-hidden="true">
+                                    </span> Register
+                                </button>
+                            </span>
+                        </div>
+
+                    </form>
+                </div>
+
+            }
+
+            <hr />
+
+            <div class="main-body">
+
+
+
+
+
+                @if (ViewBag.sender == "MyInformation")
+                {
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div style="box-shadow: 2px 0px 23px 6px rgba(0,0,0,0.29); -webkit-box-shadow: 2px 0px 23px 6px rgba(0,0,0,0.29); -moz-box-shadow: 2px 0px 23px 6px rgba(0,0,0,0.29); margin-bottom:15px;">
+                                    <img src="~/Images/@Model.user[0].user_image" style="width:100%;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+                else if (ViewBag.sender == "Balance")
+                {
+
+
+
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+
+                                    <style>
+
+
+                                        p {
+                                            margin: 0px;
+                                        }
+
+
+
+
+
+
+                                        .btn.btn.btn-primary:hover {
+                                            background-position: right center;
+                                            color: #fff;
+                                            text-decoration: none;
+                                        }
+
+
+
+                                        .btn.btn-primary:hover .fas.fa-arrow-right {
+                                            transform: translate(15px);
+                                            transition: transform 0.2s ease-in;
+                                        }
+
+                                        .form-control {
+                                            color: white;
+                                            background-color: #223C60;
+                                            border: 2px solid transparent;
+                                            height: 60px;
+                                            padding-left: 20px;
+                                            vertical-align: middle;
+                                        }
+
+                                            .form-control:focus {
+                                                color: white;
+                                                background-color: #0C4160;
+                                                border: 2px solid #2d4dda;
+                                                box-shadow: none;
+                                            }
+
+                                        .text {
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                        }
+
+                                        ::placeholder {
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                        }
+                                    </style>
+
+                                    @using (Html.BeginForm("Pay", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                    {
+                                        @Html.ValidationMessage("CardNumber", "", new { @class = "text-danger" })
+                                        <div style="box-shadow: 2px 0px 23px 6px rgba(0,0,0,0.29); -webkit-box-shadow: 2px 0px 23px 6px rgba(0,0,0,0.29); -moz-box-shadow: 2px 0px 23px 6px rgba(0,0,0,0.29);padding:20px;padding-bottom:0;margin-bottom:20px;">
+                                            <div class="col-12">
+                                                <div class="d-flex flex-column">
+                                                    <p class="text mb-1">Card Holder's Name</p>
+                                                    <input required class="form-control mb-3" type="text" id="CardHolder" name="CardHolder" placeholder="Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex flex-column">
+
+                                                    <p class="text mb-1">Card Number</p>
+                                                    <input class="form-control text-box single-line" data-val="true" data-val-number="The field CardNumber must be a number." data-val-regex="Please enter a valid Visa card number." data-val-regex-pattern="^(4\d{12}(?:\d{3})?)$" data-val-required="The CardNumber field is required." id="CardNumber" name="CardNumber" type="number" value="" />                                                </div>
+                                            </div>
+                                            <div style="display:grid;grid-template-columns:49% 49%;justify-content:space-between;">
+                                                <div class="col-6">
+                                                    <div class="d-flex flex-column">
+                                                        <p class="text mb-1">Month</p>
+                                                        <input required class="form-control mb-3" type="text" placeholder="MM">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="d-flex flex-column">
+                                                        <p class="text mb-1">Year</p>
+                                                        <input required class="form-control mb-3" type="text" placeholder="YY">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div style="display:grid;grid-template-columns:49% 49%;justify-content:space-between;">
+                                                <div class="col-6">
+                                                    <div class="d-flex flex-column">
+                                                        <p class="text mb-1">CVV/CVC</p>
+                                                        <input required class="form-control mb-3 pt-2 " id="CVC" name="CVC" type="password" placeholder="***">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="d-flex flex-column">
+                                                        <p class="text mb-1">Payment Amount</p>
+                                                        <input required class="form-control mb-3" id="PayButton" name="PayButton" type="number">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="btn btn-primary" style="margin-top:20px; border-radius:unset;margin-bottom:20px;">
+                                                <button class='btn btn-primary' type='submit'>Pay »</button>
+
+
+                                            </div>
+                                        </div>
+                                    }
+
+
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                @if (ViewBag.sender == "Balance")
+                                {
+
+
+                                    <div id="smart-button-container" style="box-shadow: 2px 0px 23px 6px rgba(0,0,0,0.29); -webkit-box-shadow: 2px 0px 23px 6px rgba(0,0,0,0.29); -moz-box-shadow: 2px 0px 23px 6px rgba(0,0,0,0.29);width:95%;padding:50px 20px 0px 20px;">
+
+                                        <div style="text-align: center;">
+                                            <div id="paypal-button-container">
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <script src="https://www.paypal.com/sdk/js?client-id=AYOPFmJHKEp34Obn8Gp5EJhzo8qOotnJl2Y6lj3E72wh3UcV-V-gVaGPkM-bR-XvEfuvN5ZhSeOgZk6R&amp;enable-funding=venmo&amp;currency=USD" data-sdk-integration-source="button-factory"></script>
+                                                <script>
+                                                    function initPayPalButton() {
+                                                        paypal.Buttons({
+                                                            style: {
+                                                                shape: 'rect',
+                                                                color: 'gold',
+                                                                layout: 'vertical',
+                                                                label: 'paypal',
+
+                                                            },
+
+                                                            createOrder: function (data, actions) {
+                                                                return actions.order.create({
+                                                                    purchase_units: [{ "description": "شراء حسابات ميرش باي امازون", "amount": { "currency_code": "USD", "value": 60 } }]
+                                                                });
+                                                            },
+
+                                                            onApprove: function (data, actions) {
+                                                                return actions.order.capture().then(function (orderData) {
+
+                                                                    // Full available details
+                                                                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+                                                                    // Show a success message within this page, e.g.
+                                                                    const element = document.getElementById('paypal-button-container');
+                                                                    element.innerHTML = '';
+                                                                    element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+                                                                    // Or go to another URL:  actions.redirect('thank_you.html');
+
+                                                                });
+                                                            },
+
+                                                            onError: function (err) {
+                                                                console.log(err);
+                                                            }
+                                                        }).render('#paypal-button-container');
+                                                    }
+                                                    initPayPalButton();
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-md-8">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+
+                                @if (ViewBag.sender == "MyInformation")
+                                {
+
+
+
+                                    <table class="table table-responsive" style="width:99%; color:black;">
+                                        <tr>
+                                            <td>
+                                                <strong>  First Name:  </strong>
+                                            </td>
+                                            <td>
+
+                                                @Model.user[0].First_Name
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>  Last Name:  </strong>
+                                            </td>
+                                            <td>
+                                                @Model.user[0].Last_Name
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>  Email:  </strong>
+                                            </td>
+                                            <td>
+                                                @Model.user[0].Email
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>  Phone Number:  </strong>
+                                            </td>
+                                            <td>
+                                                @Model.user[0].PhoneNumber
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>    National Number:  </strong>
+                                            </td>
+                                            <td>
+                                                @Model.user[0].National_Number
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>   HighSchool Avg:  </strong>
+                                            </td>
+                                            <td>
+                                                @Model.user[0].HighSchool_Avg
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>   Major: </strong>
+                                            </td>
+                                            <td>
+                                                @Model.user[0].Major.Major_Name
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>   Balance: </strong>
+                                            </td>
+                                            <td>
+                                                @Model.user[0].Balance Jd
+                                            </td>
+                                        </tr>
+                                    </table>
+
+
+
+
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @if (ViewBag.sender == "MyCourses")
+                {
+                    <div class="container">
+                        <table class="table table-bordered " style="width:97%;">
+                            <thead style="color:black;">
+                                <tr>
+
+                                    <th class="avatar">Course Name</th>
+                                    <th>Number Of Hours</th>
+                                    <th>Course Days</th>
+                                    <th>Time</th>
+                                    <th>Hall</th>
+
+                                    <th>Doctor</th>
+                                    <th>Mark</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.enroll)
+                                {
+                                    <tr style="color:black;">
+                                        <td>@item.Courses_Offered.Cours.Course_Name</td>
+                                        <td>  <span class="name">@item.Courses_Offered.Cours.Number_Of_Hours</span> </td>
+                                        <td>  <span class="name">@item.Courses_Offered.Day.Days</span> </td>
+                                        <td> <span class="product">@item.Courses_Offered.start_time -- @item.Courses_Offered.end_time</span> </td>
+                                        <td>@item.Courses_Offered.Hall</td>
+
+
+                                        <td> <span class="product">@item.Courses_Offered.Doctor.Doctor_Name</span> </td>
+                                        <td>@item.Course_mark</td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+@if (TempData["swal_message"] != null)
+{
+    <script>
+    swal({
+      title: "@ViewBag.title",
+      text: "@TempData["swal_message"]",
+      icon: "@ViewBag.icon"
+    });
+    </script>}
+
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
